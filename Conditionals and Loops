@@ -1,0 +1,123 @@
+#1. Write a Python program to find those numbers which are divisible by 7 and multiple of 5, between 1500 and 2700 (both included).
+
+x = int(input())
+x / 7 == 0 and x % 5 == 0 and 1500 < x < 2700 
+
+# 2. Write a Python program to convert temperatures to and from celsius, fahrenheit. [ Formula : c/5 = f-32/9 [ where c = temperature in celsius and f = temperature in fahrenheit ] Expected Output : 60°C is 140 in Fahrenheit and 45°F is 7 in Celsius
+
+c = int(input())
+f = c/5 + 32/9 
+print (f"{c}C is {f} in Fahrenheit")
+
+# 3. Write a Python program to guess a number between 1 to 9. Note : User is prompted to enter a guess. If the user guesses wrong then the prompt appears again until the guess is correct, on successful guess, user will get a "Well guessed!" message, and the program will exit.
+
+import random 
+answer = random.randint (1,10)
+guess = 0
+
+while True:
+  guess = int(input("Write your number"))
+  if guess != answer:
+    print ("Your guess is wrong")
+  else:
+   print ("Your guess is correct!")
+   break
+   
+#4 Write a Python program to construct the following pattern, using a nested for loop.
+
+for i in range (1,6): 
+  print ("*" * i)
+
+for i in range (4):
+  print (""*i + "*" * (5-i) + ""*i)
+
+#5 Write a Python program that accepts a word from the user and reverse it.
+   
+#6 Write a Python program to count the number of even and odd numbers from a series of numbers. Sample numbers : numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9) Expected Output : Number of even numbers : 5 Number of odd numbers : 4
+
+x = int(input())
+for x in range (1,10):
+  if x % 2 == 0:
+    print ("even number")
+  else: 
+    print ("odd number")
+    
+#7 Write a Python program that prints each item and its corresponding type from the following list.
+
+    
+#8 Write a Python program that prints all the numbers from 0 to 6 except 3 and 6. Note : Use 'continue' statement. Expected Output : 0 1 2 4 5
+
+for i in range (0,7):
+ if i != 3 and i != 6:
+   print (1 * i)
+   
+#9 Write a Python program to get the Fibonacci series between 0 to 50. Note : The Fibonacci Sequence is the series of numbers : 0, 1, 1, 2, 3, 5, 8, 13, 21, .... Every next number is found by adding up the two numbers before it. Expected Output : 1 1 2 3 5 8 13 21 34
+
+
+#10 Write a Python program which iterates the integers from 1 to 50. For multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".
+
+#11 Write a Python program which takes two digits m (row) and n (column) as input and generates a two-dimensional array. The element value in the i-th row and j-th column of the array should be i*j.
+
+#12. Write a Python program that accepts a sequence of lines (blank line to terminate) as input and prints the lines as output (all characters in lower case).
+
+#13. Write a Python program which accepts a sequence of comma separated 4 digit binary numbers as its input and print the numbers that are divisible by 5 in a comma separated sequence.Sample Data : 0100,0011,1010,1001,1100,1001 Expected Output : 1010
+
+import random
+randNum = random.randInt()
+
+x = int(input())
+if () and x%5 == 0:
+  print (1010)
+  
+#14 Write a Python program that accepts a string and calculate the number of digits and letters. Sample Data : Python 3. Expected Output : Letters 6 Digits 2
+
+s = input()
+
+l = 0 
+d = 0 
+
+for i in s:
+  if i.isletter():
+    l=l+1
+  else i.isdigit():
+    d=d+1
+
+print("letters", l)
+print("digits", d)
+
+#15. Write a Python program to check the validity of password input by users. Validation : At least 1 letter between [a-z] and 1 letter between [A-Z], At least 1 number between [0-9], At least 1 character from [$#@], Minimum length 6 characters, Maximum length 16 characters.
+
+s = input()
+
+lowerCaseExist = False
+upperCaseExist = False
+digitExist = False
+characterExist = False 
+
+
+for i in range(len(s)):
+  if s[i].islower():
+    lowerCaseExist = True
+  if s[i].isupper():
+    upperCaseExist = True
+  if s[i].isdigit():
+    digitExist = True
+  if s[i].ischaracter():
+    characterExist = True
+
+if lowerCaseExist and upperCaseExist and digitExist and 6 < len(s) < 16:
+  print("Your password is valid")
+else:
+  print("Your password is invalid") 
+
+
+#16. Write a Python program to find numbers between 100 and 400 (both included) where each digit of a number is an even number. The numbers obtained should be printed in a comma-separated sequence.
+
+for x in range (100,401):
+  s = str(x)
+  isAllEven = True 
+  for i in range(len(s)):
+    if int[s(i)]%2 != 0:
+      isAllEven = False
+  if isAllEven:
+    print('x',end=',')
